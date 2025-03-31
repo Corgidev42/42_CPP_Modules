@@ -65,37 +65,43 @@ Run the compiled executable:
 
 ---
 
-## 📚 Example Project Structure
+## 📁 Project Structure
 
 ```
-cpp_module/
-├── ex00/
-│   ├── main.cpp              # Entry point
-│   ├── ClassName.cpp         # Implementation
-│   ├── ClassName.hpp         # Declaration
-│   └── Makefile              # Compilation
-├── ex01/
-│   ├── main.cpp
-│   ├── ClassName.cpp
-│   ├── ClassName.hpp
-│   └── Makefile
-└── ...                       # Further exercises
+42_CPP_Modules/
+├── 00
+│   ├── ex00
+│   │   ├── include/
+│   │   ├── src/
+│   │   ├── Makefile
+│   ├── ex01/
+│   ├── ex02/
+│   └── Sujet FR.pdf
+├── 01
+│   ├── ex00/
+│   ├── ex01/
+│   ├── ex02/
+│   ├── ex03/
+│   ├── ex04/
+│   ├── ex05/
+│   └── ex06/
+├── 02
+│   ├── ex00/
+│   ├── ex01/
+│   ├── ex02/
+│   └── ex03/
+├── 03
+│   ├── ex00/
+│   ├── ex01/
+│   ├── ex02/
+│   └── ex03/
+├── 04
+│   ├── ex00/
+│   ├── ex01/
+│   ├── ex02/
+│   └── ex03/
+└── README.md
 ```
-
----
-
-## 📖 Summary of Exercises
-
-### Module 03 (Example)
-- **ClapTrap** 🤖: Basic combat robot class.
-- **ScavTrap** 🛡️: Defensive robot with gatekeeper mode.
-- **FragTrap** 💥: Offensive robot with high damage.
-- **DiamondTrap** 💎: Combines ScavTrap and FragTrap behaviors through virtual inheritance.
-
-### Module 04 (Example)
-- **Animal Hierarchy** 🐶🐱: Implement polymorphic behavior for animals (Dog, Cat).
-- **AMateria Interface** ✨: Create and manage magical materias (Ice, Cure).
-- **MateriaSource & Characters** 🎭: Equip and use materias in a polymorphic context.
 
 ---
 
