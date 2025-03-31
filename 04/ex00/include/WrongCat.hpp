@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 14:52:25 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/31 13:10:08 by vbonnard         ###   ########.fr       */
+/*   Created: 2025/03/31 13:39:27 by vbonnard          #+#    #+#             */
+/*   Updated: 2025/03/31 13:39:29 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
-int main() {
-	ScavTrap scav("SC4V-TP");
+#include "WrongAnimal.hpp"
 
-	scav.attack("target_dummy");
-	scav.takeDamage(20);
-	scav.beRepaired(10);
-	scav.guardGate();
+class WrongCat : public WrongAnimal {
+public:
+	WrongCat();
+	WrongCat(const WrongCat &other);
+	WrongCat &operator=(const WrongCat &other);
+	~WrongCat();
 
-	// Test du constructeur de recopie
-	ScavTrap copyScav(scav);
-	copyScav.attack("another_target");
+	void makeSound() const; // Redéfinie, mais sans virtual dans WrongAnimal, cela ne fonctionne pas comme prévu
+};
 
-	return 0;
-}
+#endif

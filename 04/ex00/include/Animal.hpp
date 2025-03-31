@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 14:52:25 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/31 13:10:08 by vbonnard         ###   ########.fr       */
+/*   Created: 2025/03/31 13:33:04 by vbonnard          #+#    #+#             */
+/*   Updated: 2025/03/31 13:33:07 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
-int main() {
-	ScavTrap scav("SC4V-TP");
+#include <iostream>
+#include <string>
 
-	scav.attack("target_dummy");
-	scav.takeDamage(20);
-	scav.beRepaired(10);
-	scav.guardGate();
+class Animal {
+protected:
+	std::string type;
+public:
+	Animal();
+	Animal(const Animal &other);
+	Animal &operator=(const Animal &other);
+	virtual ~Animal();
 
-	// Test du constructeur de recopie
-	ScavTrap copyScav(scav);
-	copyScav.attack("another_target");
+	std::string getType() const;
+	virtual void makeSound() const;
+};
 
-	return 0;
-}
+#endif

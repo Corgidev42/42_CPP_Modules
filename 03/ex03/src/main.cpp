@@ -5,24 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 14:52:25 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/31 13:10:08 by vbonnard         ###   ########.fr       */
+/*   Created: 2025/03/31 13:07:43 by vbonnard          #+#    #+#             */
+/*   Updated: 2025/03/31 13:10:20 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main() {
-	ScavTrap scav("SC4V-TP");
+	// Test de DiamondTrap
+	std::cout << "\n--- DiamondTrap Tests ---" << std::endl;
+	DiamondTrap diamond("DI4M-TP");
 
-	scav.attack("target_dummy");
-	scav.takeDamage(20);
-	scav.beRepaired(10);
-	scav.guardGate();
+	// Vérification des méthodes héritées
+	diamond.attack("test_target");
+	diamond.takeDamage(40);
+	diamond.beRepaired(20);
 
-	// Test du constructeur de recopie
-	ScavTrap copyScav(scav);
-	copyScav.attack("another_target");
+	// Vérification de la méthode spécifique whoAmI()
+	diamond.whoAmI();
+
+	// Test du constructeur de recopie et de l'opérateur d'affectation
+	DiamondTrap copyDiamond(diamond);
+	copyDiamond.whoAmI();
+
+	DiamondTrap assignedDiamond("Assigned");
+	assignedDiamond = diamond;
+	assignedDiamond.whoAmI();
 
 	return 0;
 }

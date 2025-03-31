@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 14:52:25 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/31 13:10:08 by vbonnard         ###   ########.fr       */
+/*   Created: 2025/03/31 13:35:19 by vbonnard          #+#    #+#             */
+/*   Updated: 2025/03/31 13:35:22 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef DOG_HPP
+#define DOG_HPP
 
-int main() {
-	ScavTrap scav("SC4V-TP");
+#include "Animal.hpp"
 
-	scav.attack("target_dummy");
-	scav.takeDamage(20);
-	scav.beRepaired(10);
-	scav.guardGate();
+class Dog : public Animal {
+public:
+	Dog();
+	Dog(const Dog &other);
+	Dog &operator=(const Dog &other);
+	virtual ~Dog();
 
-	// Test du constructeur de recopie
-	ScavTrap copyScav(scav);
-	copyScav.attack("another_target");
+	virtual void makeSound() const;
+};
 
-	return 0;
-}
+#endif

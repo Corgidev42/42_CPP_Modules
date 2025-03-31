@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 14:52:25 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/31 13:10:08 by vbonnard         ###   ########.fr       */
+/*   Created: 2025/03/31 13:36:18 by vbonnard          #+#    #+#             */
+/*   Updated: 2025/03/31 13:36:20 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef CAT_HPP
+#define CAT_HPP
 
-int main() {
-	ScavTrap scav("SC4V-TP");
+#include "Animal.hpp"
 
-	scav.attack("target_dummy");
-	scav.takeDamage(20);
-	scav.beRepaired(10);
-	scav.guardGate();
+class Cat : public Animal {
+public:
+	Cat();
+	Cat(const Cat &other);
+	Cat &operator=(const Cat &other);
+	virtual ~Cat();
 
-	// Test du constructeur de recopie
-	ScavTrap copyScav(scav);
-	copyScav.attack("another_target");
+	virtual void makeSound() const;
+};
 
-	return 0;
-}
+#endif
