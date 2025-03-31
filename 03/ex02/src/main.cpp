@@ -6,12 +6,11 @@
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 15:07:39 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/26 15:16:29 by vbonnard         ###   ########.fr       */
+/*   Updated: 2025/03/31 12:54:08 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
-
 
 
 int main() {

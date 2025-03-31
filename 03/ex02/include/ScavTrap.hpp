@@ -6,18 +6,18 @@
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 14:50:28 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/26 15:17:10 by vbonnard         ###   ########.fr       */
+/*   Updated: 2025/03/31 12:52:22 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 # include <string>
 # include <iostream>
 # include <ostream>
 # include "ClapTrap.hpp"
-# include "FragTrap.hpp"
+
 
 class ScavTrap : public ClapTrap {
 public:

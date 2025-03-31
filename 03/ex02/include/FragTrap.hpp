@@ -6,7 +6,7 @@
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 15:07:02 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/26 15:16:48 by vbonnard         ###   ########.fr       */
+/*   Updated: 2025/03/31 12:51:43 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <iostream>
 # include <ostream>
 # include "ClapTrap.hpp"
-# include "ScavTrap.hpp"
 
 class FragTrap : public ClapTrap {
 public:
