@@ -6,7 +6,7 @@
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 14:25:14 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/31 14:25:15 by vbonnard         ###   ########.fr       */
+/*   Updated: 2025/04/01 20:56:45 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,14 +70,21 @@ void Character::equip(AMateria* m) {
 	std::cout << _name << "'s inventory is full." << std::endl;
 }
 
-void Character::unequip(int idx) {
-	if (idx < 0 || idx >= 4 || _inventory[idx] == 0) {
-		std::cout << "No materia to unequip at slot " << idx << "." << std::endl;
-		return;
-	}
-	std::cout << _name << " unequips materia from slot " << idx << "." << std::endl;
-	// Ne pas delete la materia, juste détacher
-	_inventory[idx] = 0;
+// void Character::unequip(int idx) {
+// 	if (idx < 0 || idx >= 4 || _inventory[idx] == 0) {
+// 		std::cout << "No materia to unequip at slot " << idx << "." << std::endl;
+// 		return;
+// 	}
+// 	std::cout << _name << " unequips materia from slot " << idx << "." << std::endl;
+// 	_inventory[idx] = 0;
+// }
+
+AMateria* Character::unequip(int idx) {
+	if (idx < 0 || idx >= 4 || !_inventory[idx])
+		return NULL;
+	AMateria* tmp = _inventory[idx];
+	_inventory[idx] = NULL;
+	return tmp;
 }
 
 void Character::use(int idx, ICharacter& target) {

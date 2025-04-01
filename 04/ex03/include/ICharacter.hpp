@@ -6,7 +6,7 @@
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 14:24:45 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/31 14:36:27 by vbonnard         ###   ########.fr       */
+/*   Updated: 2025/04/01 20:57:10 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	virtual ~ICharacter() {}
 	virtual std::string const & getName() const = 0;
 	virtual void equip(AMateria* m) = 0;
-	virtual void unequip(int idx) = 0;
+	virtual AMateria* unequip(int idx) = 0;
 	virtual void use(int idx, ICharacter& target) = 0;
 };
 
