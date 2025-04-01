@@ -6,11 +6,12 @@
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 16:54:53 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/19 18:21:44 by vbonnard         ###   ########.fr       */
+/*   Updated: 2025/04/01 20:16:41 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include <algorithm>
 
 PhoneBook::PhoneBook() : totalContacts_(0)
 {};
@@ -46,7 +47,7 @@ void	PhoneBook::addContact()
 
 	std::cout << "Enter your Phone Number (digits only): ";
 	std::getline(std::cin, phoneNumber);
-	if (phoneNumber.empty() || !std::all_of(phoneNumber.begin(), phoneNumber.end(), ::isdigit))
+	if (phoneNumber.empty())
 	{
 		std::cout << "Field must contain digits only and cannot be empty." << std::endl;
 		return;
