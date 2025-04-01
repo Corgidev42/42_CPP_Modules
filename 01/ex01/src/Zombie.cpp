@@ -6,7 +6,7 @@
 /*   By: vbonnard <vbonnard@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 13:26:31 by vbonnard          #+#    #+#             */
-/*   Updated: 2025/03/20 13:52:26 by vbonnard         ###   ########.fr       */
+/*   Updated: 2025/04/01 20:20:00 by vbonnard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void randomChump(std::string name)
 Zombie* zombieHorde(int N, std::string name)
 {
 	if (N <= 0)
-		return (nullptr);
+		return (NULL);
 
 	Zombie*	horde = new Zombie[N];
 
