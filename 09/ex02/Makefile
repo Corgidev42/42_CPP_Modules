@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 LDFLAGS =
 
 # 🏆 Nom du projet
-PROJECT_NAME = easyfind
+PROJECT_NAME = PmergeMe
 
 # 🖥️ Détection de l'OS
 UNAME_S := $(shell uname -s)
