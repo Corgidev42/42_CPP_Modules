@@ -2,7 +2,7 @@
 #include <stdexcept>
 
 template<typename T>
-Array<T>::Array() : _array(new T[NULL]), _size(0){}
+Array<T>::Array() : _array(new T[0]), _size(0){}
 
 template<typename T>
 Array<T>::Array(unsigned int n) : _array(new T[n]), _size(n){}
@@ -15,7 +15,7 @@ Array<T>::Array(const Array& other) : _array(new T[other._size]), _size(other._s
 
 template<typename T>
 Array<T>& Array<T>::operator=(const Array& other){
-  if (other == *this)
+  if (this == &other)
     return (*this);
   delete[] (_array);
   _array = new T[other._size];

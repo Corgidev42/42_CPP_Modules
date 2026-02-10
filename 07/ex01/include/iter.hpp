@@ -1,12 +1,17 @@
 #pragma once
 
-#include <unistd.h>
+#include <cstddef>
 #include <iostream>
 
 template <typename T, typename F>
-void iter(T *array, size_t size, F function){
-  size_t i;
-  for (i = 0; i < size; i++)
+void iter(T* array, size_t size, F function){
+  for (size_t i = 0; i < size; i++)
+    function(array[i]);
+}
+
+template <typename T, typename F>
+void iter(const T* array, size_t size, F function){
+  for (size_t i = 0; i < size; i++)
     function(array[i]);
 }
 
