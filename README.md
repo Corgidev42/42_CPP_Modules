@@ -1,6 +1,6 @@
-# CPP Modules - Object-Oriented Programming in C++
+# CPP Modules - Object-Oriented Programming in C++ 🚀
 
-## Description
+## Description 📌
 
 The **CPP Modules** from **42** teach object-oriented programming using the
 **C++98** standard. Across these modules, students work through key concepts:
@@ -20,9 +20,9 @@ and abstraction.
 
 ---
 
-## Completed Modules and Key Concepts
+## Completed Modules and Key Concepts ✅
 
-### Module 00 - C++ Introduction
+### Module 00 - C++ Introduction 🧱
 - Namespaces and scope
 - IO streams (iostream)
 - Simple classes and member functions
@@ -30,7 +30,7 @@ and abstraction.
 - ex01: My PhoneBook
 - ex02: The Job of Your Dreams
 
-### Module 01 - Memory Management
+### Module 01 - Memory Management 🧠
 - References and pointers
 - Dynamic allocation and deallocation
 - Deep copy vs shallow copy
@@ -42,7 +42,7 @@ and abstraction.
 - ex05: Harl 2.0
 - ex06: Harl filter
 
-### Module 02 - Fixed-Point Arithmetic
+### Module 02 - Fixed-Point Arithmetic 🧮
 - Operator overloading
 - Orthodox canonical form
 - Constructors, destructors, copy constructors
@@ -51,7 +51,7 @@ and abstraction.
 - ex02: Now we're talking
 - ex03: BSP
 
-### Module 03 - Inheritance
+### Module 03 - Inheritance 🧬
 - Single and multiple inheritance
 - Diamond problem
 - Virtual inheritance
@@ -60,7 +60,7 @@ and abstraction.
 - ex02: Repetitive, isn't it?
 - ex03: Now it's weird!
 
-### Module 04 - Polymorphism and Interfaces
+### Module 04 - Polymorphism and Interfaces 🎭
 - Pure virtual functions
 - Abstract classes
 - Interfaces
@@ -70,7 +70,7 @@ and abstraction.
 - ex02: Abstract class
 - ex03: Interface & recap
 
-### Module 05 - Exceptions and Bureaucracy
+### Module 05 - Exceptions and Bureaucracy ⚠️
 - Exception handling (try/catch/throw)
 - Custom exception classes
 - Exception hierarchies
@@ -79,7 +79,7 @@ and abstraction.
 - ex02: Concrete forms
 - ex03: The Intern makes the forms
 
-### Module 06 - Type Conversions in C++
+### Module 06 - Type Conversions in C++ 🔁
 - C++ casts (static_cast, dynamic_cast, reinterpret_cast, const_cast)
 - Scalar type conversion
 - Serialization and deserialization
@@ -88,7 +88,7 @@ and abstraction.
 - ex01: Serialization
 - ex02: Real type identification
 
-### Module 07 - Templates
+### Module 07 - Templates 🧩
 - Function templates
 - Class templates
 - Template specialization
@@ -97,7 +97,7 @@ and abstraction.
 - ex01: iter
 - ex02: Array
 
-### Module 08 - Templated Containers
+### Module 08 - Templated Containers 📦
 - STL containers (vector, list, stack, etc.)
 - Iterators
 - STL algorithms
@@ -106,7 +106,7 @@ and abstraction.
 - ex01: Span
 - ex02: Mutated abomination
 
-### Module 09 - Advanced STL Containers
+### Module 09 - Advanced STL Containers 🧭
 - std::map and associative containers
 - Parsing and data processing
 - Sorting and searching algorithms
@@ -117,7 +117,7 @@ and abstraction.
 
 ---
 
-## Build and Run
+## Build and Run 🛠️
 
 ### Compilation
 
@@ -151,7 +151,7 @@ make fclean
 
 ---
 
-## Project Structure
+## Project Structure 📁
 
 ```
 42_CPP_Modules/
@@ -209,7 +209,7 @@ make fclean
 
 ---
 
-## Progress
+## Progress 📊
 
 | Module | Status | Exercises | Key Concepts |
 |--------|--------|-----------|--------------|
@@ -228,7 +228,7 @@ make fclean
 
 ---
 
-## Skills Gained
+## Skills Gained 🎓
 
 Through these modules, I developed expertise in:
 
@@ -245,20 +245,20 @@ Through these modules, I developed expertise in:
 
 ---
 
-## Author
+## Author ✍️
 
 - **Vincent Bonnard** (<vbonnard@student.42perpignan.fr>)
 
 ---
 
-## Note
+## Note 📌
 
 This project was developed as part of the **42 School** curriculum. Suggestions
 and improvements are welcome.
 
 ---
 
-## Useful Resources
+## Useful Resources 📚
 
 - [CPP Reference](https://en.cppreference.com/)
 - [CPlusPlus.com](https://www.cplusplus.com/)
