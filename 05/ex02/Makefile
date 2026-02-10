@@ -55,6 +55,8 @@ clean:
 # 🗑️ Nettoyage complet (objets et exécutable)
 fclean: clean
 	rm -f $(PROJECT_NAME)
+	rm -f home_shrubbery
+	rm -f home_shrubbery_shrubbery
 	@echo "🗑️  Nettoyage complet effectué."
 
 # 🔄 Reconstruction

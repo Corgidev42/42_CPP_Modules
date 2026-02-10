@@ -6,6 +6,8 @@
 #include <fstream>
 class ShrubberyCreationForm : public AForm
 {
+private:
+    std::string _target;
 public:
     ShrubberyCreationForm(const std::string& target);
     virtual ~ShrubberyCreationForm();

@@ -2,6 +2,7 @@
 # define A_FORM_HPP
 
 #include <string>
+#include <iostream>
 #include <stdexcept>
 #include "Bureaucrat.hpp"
 class Bureaucrat;
@@ -36,6 +37,12 @@ public:
     };
 
     class GradeTooLowException : public std::exception
+    {
+    public:
+        const char* what() const throw();
+    };
+
+    class NotSignedException : public std::exception
     {
     public:
         const char* what() const throw();
