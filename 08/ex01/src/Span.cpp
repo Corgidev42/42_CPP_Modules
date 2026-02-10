@@ -14,11 +14,10 @@ Span::Span(const Span& other) : _size(other._size){
 }
 
 Span& Span::operator=(const Span& other){
-  std::vector<int>::const_iterator it;
-  _store.clear();
-  for (it = other._store.begin(); it != other._store.end() ; ++it)
-    _store.push_back(*it);
-
+  if (this == &other)
+    return *this;
+  _store = other._store;
+  _size = other._size;
   return *this;
 }
 

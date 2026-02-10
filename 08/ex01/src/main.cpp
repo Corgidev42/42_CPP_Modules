@@ -7,7 +7,7 @@
 int main() {
     std::srand(std::time(NULL)); // initialisation du générateur aléatoire
 
-    const size_t N = 1000000000;
+    const size_t N = 100000;
     Span sp(N);
 
     // Créons un vector d'entiers aléatoires
