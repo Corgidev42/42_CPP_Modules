@@ -2,6 +2,8 @@
 #include <vector>
 #include <list>
 #include <string>
+#include <cctype>
+#include <climits>
 #include <sys/time.h>
 
 #include "vector_ford_johnson.hpp"
@@ -66,13 +68,24 @@ int main(int argc, char* argv[])
 
     // Parse arguments
     for (int i = 1; i < argc; i++) {
-        long n = atol(argv[i]);
-        if (n < 0) {
-            std::cerr << "Invalid number: only unsigned int allowed.\n";
+        std::string arg(argv[i]);
+        if (arg.empty()) {
+            std::cerr << "Invalid number: empty input.\n";
             return 2;
         }
-        vectorList.push_back((unsigned int)n);
-        listList.push_back((unsigned int)n);
+        for (size_t j = 0; j < arg.size(); ++j) {
+            if (!std::isdigit(static_cast<unsigned char>(arg[j]))) {
+                std::cerr << "Invalid number: only unsigned int allowed.\n";
+                return 2;
+            }
+        }
+        unsigned long n = std::strtoul(arg.c_str(), NULL, 10);
+        if (n > UINT_MAX) {
+            std::cerr << "Invalid number: exceeds unsigned int range.\n";
+            return 2;
+        }
+        vectorList.push_back(static_cast<unsigned int>(n));
+        listList.push_back(static_cast<unsigned int>(n));
     }
 
     std::cout << "\n===== INPUT =====\n";

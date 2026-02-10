@@ -73,9 +73,6 @@ void RPN::_processToken(const std::string& token) {
 		if (n == 0 && (token.size() > 1 || token[0] != '0'))
 			throw RPN::InvalidTypeException();
 		push(n);
-		_numbers++;
-		if (_numbers > MAX_NUMBERS)
-			throw RPN::TooManyNumbersException();
 	}
 }
 

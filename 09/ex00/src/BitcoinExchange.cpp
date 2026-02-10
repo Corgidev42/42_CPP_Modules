@@ -56,14 +56,20 @@ void processData(char* path, const std::map<time_t, float>& btcData){
     float rate = -1;
     time_t timestamp;
 
-    l >> std::get_time(&t, "%Y-%m-%d");
+    if (!(l >> std::get_time(&t, "%Y-%m-%d"))) {
+      std::cerr << "Error: bad input => " << line << std::endl;
+      continue;
+    }
     l.ignore(1);
     if (t.tm_mday == 0 || l.peek() != '|'){
       std::cerr << "Error: bad input => " << line << std::endl;
       continue;
     }
     l.ignore(2);
-    l >> rate;
+    if (!(l >> rate)) {
+      std::cerr << "Error: bad input => " << line << std::endl;
+      continue;
+    }
     if (rate < 0){
       std::cerr << "Error: not a positive number." << std::endl;
       continue;
@@ -74,15 +80,15 @@ void processData(char* path, const std::map<time_t, float>& btcData){
     }
 
     timestamp = std::mktime(&t);
-    std::map<time_t, float>::const_iterator it;
-    for (it = btcData.begin() ; it != btcData.end() ; ++it){
-      if (it->first - timestamp > 0){
-        --it;
-        float result = rate * it->second;
-        std::cout << line.substr(0, 10) << " => " << rate << " = " << result << std::endl;
-        break;
-      }
+    std::map<time_t, float>::const_iterator it = btcData.lower_bound(timestamp);
+    if (it == btcData.begin() && (it == btcData.end() || it->first > timestamp)) {
+      std::cerr << "Error: no rate available for date => " << line.substr(0, 10) << std::endl;
+      continue;
     }
+    if (it == btcData.end() || it->first > timestamp)
+      --it;
+    float result = rate * it->second;
+    std::cout << line.substr(0, 10) << " => " << rate << " = " << result << std::endl;
 
     t.tm_isdst = -1;
    }
