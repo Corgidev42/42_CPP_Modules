@@ -1,4 +1,3 @@
-fclean: clean
 NAME = serialization
 
 CXX = c++

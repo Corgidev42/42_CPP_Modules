@@ -1,4 +1,3 @@
-fclean: clean
 NAME = dynamic_cast
 
 CXX = c++

@@ -1,4 +1,3 @@
-fclean: clean
 NAME = convert
 
 CXX = c++
