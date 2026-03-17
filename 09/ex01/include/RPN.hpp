@@ -42,8 +42,6 @@ public:
 	void process();
 	float result();
 
-	friend std::ostream& operator<<(std::ostream &os, const RPN& rpn);
-
 	void sum();
 	void sub();
 	void mul();
@@ -79,3 +77,5 @@ public:
 			const char* what() const throw();
 	};
 };
+
+std::ostream& operator<<(std::ostream& os, const RPN& rpn);

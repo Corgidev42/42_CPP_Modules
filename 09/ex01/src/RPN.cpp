@@ -1,4 +1,4 @@
-#include "Rpn.hpp"
+#include "RPN.hpp"
 
 binary RPN::_binaryAccess() {
 	if (_stack.size() <= 1)
@@ -145,7 +145,7 @@ void RPN::div() {
 }
 
 const char* RPN::InvalidTypeException::what() const throw() {
-	return "Invalid type";
+	return "Error";
 }
 
 const char* RPN::DivideByZeroException::what() const throw() {

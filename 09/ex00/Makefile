@@ -25,7 +25,7 @@ OBJ_DIR = obj
 INCLUDE_DIR = include
 
 # 📌 Fichiers sources et objets
-SRC_FILES = $(wildcard $(SRC_DIR)/*.cpp) $(wildcard $(SRC_DIR)/*/*.cpp)
+SRC_FILES = $(SRC_DIR)/main.cpp $(SRC_DIR)/BitcoinExchange.cpp
 OBJ_FILES = $(patsubst $(SRC_DIR)/%.cpp, $(OBJ_DIR)/%.o, $(SRC_FILES))
 
 # 📚 Inclusion des headers
