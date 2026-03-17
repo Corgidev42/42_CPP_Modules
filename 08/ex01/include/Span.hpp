@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SPAN_HPP
+#define SPAN_HPP
 
 #include <stdexcept>
 #include <vector>
@@ -30,3 +31,5 @@ private:
   std::vector<int> _store;
   unsigned int _size;
 };
+
+#endif

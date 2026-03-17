@@ -32,7 +32,7 @@ void Span::addNumber(int number){
 
 unsigned int Span::shortestSpan(void) const{
   if (_store.size() <= 1)
-    throw std::logic_error("few element in storage");
+    throw std::logic_error("few elements in storage");
 
   Span copy(*this);
   std::vector<int>::iterator it;
@@ -51,7 +51,7 @@ unsigned int Span::shortestSpan(void) const{
 
 unsigned int Span::longestSpan(void) const{
   if (_store.size() <= 1)
-    throw std::logic_error("few element in storage");
+    throw std::logic_error("few elements in storage");
   const int min = *(std::min_element(_store.begin(), _store.end()));
   const int max = *(std::max_element(_store.begin(), _store.end()));
 
